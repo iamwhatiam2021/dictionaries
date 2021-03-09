@@ -9,4 +9,12 @@ for i in range(10):
         students[name] = 1
 
 print(f"Here is the list of students and answers: {students}")
-
+# find the winner (find the key with the highest value)
+# 1. get a list of all the keys
+values = list(students.values())
+values.sort(reverse=True) #sorts the list descending
+winner = values[0]
+# 2 - once I have the winner, go over each key and see if she is the winner
+for key in students:
+    if students[key] == winner:
+        print(f"{key} is the winner! Congrats")
